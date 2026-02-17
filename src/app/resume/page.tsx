@@ -22,10 +22,10 @@ const ResumePage: React.FC = () => {
                     <h2 className="resume-name text-uppercase">Antonio Olvera </h2>
                     <div className="resume-role-title text-uppercase">Software Engineer</div>
                     <div className="resume-contact mt-4">
-                        <ul className="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
-                            <li className="list-inline-item me-md-3 me-lg-5"><i className="resume-contact-icon bi bi-telephone-inbound me-2"></i> +52 241 110 96 70</li>
-                            <li className="list-inline-item me-md-3 me-lg-5"><i className="resume-contact-icon bi bi-envelope me-2"></i> antonio.olvera.cruz@icloud.com</li>
-                            
+                        <ul className="resume-contact-list list-unstyled list-inline mb-0">
+                            <li className="list-inline-item"><i className="resume-contact-icon bi bi-telephone-inbound me-2"></i> +52 241 110 96 70</li>
+                            <li className="list-inline-item"><i className="resume-contact-icon bi bi-envelope me-2"></i> antonio.olvera.cruz@icloud.com</li>
+                            <li className="list-inline-item"><i className="resume-contact-icon bi bi-globe me-2"></i> antonioolvera.com</li>
                         </ul>
                     </div>
                 </div>

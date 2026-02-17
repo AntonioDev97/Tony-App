@@ -1,0 +1,26 @@
+#coming-soon-page {
+    min-height: 50vw;
+    display: flex;
+    .coming-soon-content {
+
+        text-align: center;
+        padding: 3rem;
+        background: var(--main-container-bg);
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 90%;
+        margin: auto;
+        
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+    }
+}

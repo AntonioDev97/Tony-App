@@ -24,19 +24,19 @@ const Navbar: React.FC = () => {
         <div className="offcanvas-body d-flex align-items-center">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link href="/about" className={`nav-link d-flex flex-column align-items-center ${pathname === '/about' ? 'active' : ''}`}>
+              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/about' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-person-circle"></i></span>
                 <span className="nav-text">About</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/projects" className={`nav-link d-flex flex-column align-items-center ${pathname === '/projects' ? 'active' : ''}`}>
+              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/projects' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-suitcase-lg-fill"></i></span>
                 <span className="nav-text">Projects</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/blog" className={`nav-link d-flex flex-column align-items-center ${pathname === '/blog' ? 'active' : ''}`}>
+              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/blog' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-vector-pen"></i></span>
                 <span className="nav-text">Blog</span>
               </Link>
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact" className={`nav-link d-flex flex-column align-items-center ${pathname === '/contact' ? 'active' : ''}`}>
+              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/contact' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-chat-dots-fill"></i></span>
                 <span className="nav-text">Contact</span>
               </Link>
