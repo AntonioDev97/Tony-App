@@ -1,6 +1,6 @@
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    // Bootstrap uses native CSS, no PostCSS plugins needed
   },
 };
 

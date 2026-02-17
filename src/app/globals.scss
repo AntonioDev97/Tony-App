@@ -1,0 +1,74 @@
+// Bootstrap
+@use "bootstrap/scss/bootstrap";
+@use "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Dark default */
+:root {
+  --bs-body-bg: #19202e;
+  --bs-body-color: #a5b3ce;
+  --bs-primary: #3b82f6;
+  --bs-secondary: #64748b;
+  --top-header-bg: #1e293b;
+  --top-header-color: #d7dde9;
+  --toggle-border-color: #a5b3ce;
+  --toggle-ball-bg: #d7dde9;
+  --nav-link-color: #a5b3ce;
+  --hover-nav-link-color: white;
+  --primary-active: #fe655c;
+  --main-container-bg: #1e2738;
+  --font-color-00: white;
+  --font-subtitle-color: #a5b3ce;
+  --hr-color-00: #FFFFFF33;
+  --icon-bg-00: rgba(0, 0, 0, 0.15);
+  --icon-bg-01: rgba(0, 0, 0, 0.1);
+  --progress-bg: #19202e;
+  --tag-bg-00: #19202e;
+}
+
+/* Light mode */
+[data-bs-theme="light"] {
+  --bs-body-bg: #F5F7FA;
+  --bs-body-color: #354765;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --top-header-bg: #f8f9fa;
+  --top-header-color: #354765;
+  --toggle-border-color: #a5b3ce;
+  --toggle-ball-bg: #d7dde9;
+  --nav-link-color: #354765;
+  --hover-nav-link-color: #121822;
+  --main-container-bg: #fff;
+  --font-color-00:#121822;
+  --font-subtitle-color: #354765;
+  --hr-color-00: #c2cee1;
+  --icon-bg-00: #8497bc;
+  --icon-bg-01: #e4e9f2;
+  --progress-bg: #e4e9f2;
+  --tag-bg-00: #4f6591;
+}
+
+html,
+body {
+  overflow: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#main-app {
+  flex: 1;
+}
