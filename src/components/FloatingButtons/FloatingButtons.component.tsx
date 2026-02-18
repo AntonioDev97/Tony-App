@@ -66,7 +66,7 @@ const FloatingButtons: React.FC = () => {
         try {
             const clonedElement = resumeElement.cloneNode(true) as HTMLElement;
             const bodyStyles = window.getComputedStyle(document.body);
-            const numberOfPages = Math.ceil(resumeElement.scrollHeight / (1330));
+            const numberOfPages = 2;
             clonedElement.classList.add('pdf-resume');
             clonedElement.style.width = '1000px';
             clonedElement.style.minWidth = '1000px';
@@ -96,7 +96,8 @@ const FloatingButtons: React.FC = () => {
                     scale: 2,
                     useCORS: true,
                     letterRendering: true,
-                    backgroundColor: null
+                    backgroundColor: null,
+                    windowWidth: 1000,
                 },
                 jsPDF: { orientation: 'portrait', unit: 'mm', format: 'letter' },
                 pagebreak: { mode: ['css', 'legacy'] }

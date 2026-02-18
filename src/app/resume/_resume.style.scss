@@ -307,4 +307,12 @@
     .certifications {
         margin-top: 3rem;
     }
+
+    @media (max-width: 991.98px) {
+        .resume-timeline {
+            &:before {
+                height: 126.8% !important;
+            }
+        }
+    }
 }

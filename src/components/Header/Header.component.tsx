@@ -51,10 +51,10 @@ const Header: React.FC<Props> = ({ defaultTheme }: Props) => {
           </label>
         </div>
         <ul className="social-list">
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'#'}><i className="bi bi-linkedin"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'#'}><i className="bi bi-github"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'#'}><i className="bi bi-stack-overflow"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'#'}><i className="bi bi-medium"></i></Link></li>
+          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://www.linkedin.com/in/antonio-olvera'} target='_blank'><i className="bi bi-linkedin"></i></Link></li>
+          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://github.com/AntonioDev97'} target='_blank'><i className="bi bi-github"></i></Link></li>
+          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://stackoverflow.com/users/12887595/antoniodev97'} target='_blank'><i className="bi bi-stack-overflow"></i></Link></li>
+          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://medium.com/@antonio.olvera.cruz'} target='_blank'><i className="bi bi-medium"></i></Link></li>
         </ul>
         <Link href="/contact" className="btn btn-contact">
           Contact Me
