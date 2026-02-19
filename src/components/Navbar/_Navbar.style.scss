@@ -1,67 +1,110 @@
 #main-navbar {
-    #offcanvasMenu {
-        max-width: 5.5rem;
-        border: none;
-        background-color: transparent;
+  #offcanvasMenu {
+    max-width: 5.5rem;
+    border: none;
+    background-color: transparent;
 
-        .offcanvas-body {
-            padding: 0;
-            padding-left: 1rem;
+    .offcanvas-body {
+      padding: 0;
+      padding-left: 1rem;
 
-            .navbar-nav {
-                background: rgba(0, 0, 0, 0.1);
-                padding: 1rem 0.5rem;
-                border-radius: 6px;
-                min-width: 4.55rem;
+      .navbar-nav {
+        background: rgba(0, 0, 0, 0.1);
+        padding: 1rem 0.5rem;
+        border-radius: 6px;
+        min-width: 4.55rem;
 
-                [data-bs-theme="light"] & {
-                    background: white;
-                    box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.05);
-                }
-            }
-
-            .nav-text {
-                text-transform: uppercase;
-                font-size: 0.675rem;
-            }
-
-            .nav-item {
-                .active {
-                    color: var(--primary-active) !important;
-                }
-
-                .nav-link {
-                    color: var(--nav-link-color);
-
-                    .icon-holder {
-                        font-size: 1.125rem;
-                        min-height: 25px;
-                    }
-
-                    &:hover {
-                        color: var(--hover-nav-link-color);
-                    }
-                }
-            }
-
-            .nav-item-close {
-                display: flex;
-                align-items: center;
-                text-align: center;
-                flex-direction: column;
-
-                .btn-close {
-                    background-image: none;
-                    font-weight: 900;
-                    font-size: 2rem;
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
+        [data-bs-theme="light"] & {
+          background: white;
+          box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.05);
         }
-    }
+      }
 
-    .offcanvas-backdrop {
-        display: none;
+      .nav-text {
+        text-transform: uppercase;
+        font-size: 0.675rem;
+      }
+
+      .nav-item {
+        .active {
+          color: var(--primary-active) !important;
+        }
+
+        .nav-link {
+          color: var(--nav-link-color);
+
+          .icon-holder {
+            font-size: 1.125rem;
+            min-height: 25px;
+          }
+
+          &:hover {
+            color: var(--hover-nav-link-color);
+          }
+        }
+      }
+
+      .nav-item-close {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        .btn-close {
+          background-image: none;
+          font-weight: 900;
+          font-size: 2rem;
+          outline: none;
+          box-shadow: none;
+        }
+      }
     }
+  }
+
+  .offcanvas-backdrop {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body {
+    padding-bottom: 50px;
+  }
+
+  #main-navbar {
+    #offcanvasMenu {
+      position: fixed;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      transition: none;
+      max-width: none;
+
+      .offcanvas-body {
+        padding-left: 0;
+
+        .navbar-nav {
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-evenly;
+          padding: 0;
+          background: rgba(7, 9, 13, 0.9);
+
+          [data-bs-theme="light"] & {
+            background: white;
+            box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.07);
+          }
+
+          .nav-item {
+            padding: 0.3rem;
+          }
+        }
+      }
+    }
+  }
 }

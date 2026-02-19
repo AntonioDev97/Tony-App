@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                 <span className="nav-text">Contact</span>
               </Link>
             </li>
-            <li className="nav-item nav-item-close">
+            <li className="nav-item nav-item-close d-none d-lg-flex">
               <button
                 aria-label="Close"
                 className="btn-close"
