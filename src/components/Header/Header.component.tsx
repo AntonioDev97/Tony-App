@@ -29,6 +29,15 @@ const Header: React.FC<Props> = ({ defaultTheme }: Props) => {
     }
   };
 
+  const SocialList = ({ dropdown }: { dropdown?: boolean }) => (
+    <ul className={`social-list ${dropdown ? 'dropdown-menu' : ''}`}>
+      <li className='me-0 me-md-1 me-lg-2'><Link href={'https://www.linkedin.com/in/antonio-olvera'} target='_blank'><i className="bi bi-linkedin"></i></Link></li>
+      <li className='me-0 me-md-1 me-lg-2'><Link href={'https://github.com/AntonioDev97'} target='_blank'><i className="bi bi-github"></i></Link></li>
+      <li className='me-0 me-md-1 me-lg-2' title='Credly'><Link href={'https://www.credly.com/users/antonio-olvera-cruz'} target='_blank'><i className="bi bi-patch-check-fill"></i></Link></li>
+      <li className='me-0 me-md-1 me-lg-2'><Link href={'https://medium.com/@antonio.olvera.cruz'} target='_blank'><i className="bi bi-medium"></i></Link></li>
+    </ul>
+  );
+
   return (
     <div className={`container-fluid position-fixed top-0 header-container pb-1 ${isScrolled ? 'scrolled' : ''}`} style={{ zIndex: 9999 }}>
       <header id='top-header' className='text-center position-relative'>
@@ -50,12 +59,19 @@ const Header: React.FC<Props> = ({ defaultTheme }: Props) => {
             <span className="night-icon toggle-icon"><i className="bi bi-moon-fill"></i></span>
           </label>
         </div>
-        <ul className="social-list">
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://www.linkedin.com/in/antonio-olvera'} target='_blank'><i className="bi bi-linkedin"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://github.com/AntonioDev97'} target='_blank'><i className="bi bi-github"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://stackoverflow.com/users/12887595/antoniodev97'} target='_blank'><i className="bi bi-stack-overflow"></i></Link></li>
-          <li className='me-0 me-md-1 me-lg-2'><Link href={'https://medium.com/@antonio.olvera.cruz'} target='_blank'><i className="bi bi-medium"></i></Link></li>
-        </ul>
+        <SocialList />
+        { /* Social Dropdown menu for mobile */}
+        <div className="dropdown social-dropdown">
+          <button
+            className="btn btn-social-dropdown"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i className="bi bi-share-fill"></i>
+          </button>
+          <SocialList dropdown />
+        </div>
         <Link href="/contact" className="btn btn-contact">
           Contact Me
         </Link>

@@ -13,7 +13,7 @@
     &.scrolled {
         background: var(--bs-body-bg);
         backdrop-filter: blur(6px);
-        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
     }
 
     .menu-toggler {
@@ -88,6 +88,26 @@
         }
     }
 
+    @mixin social-item {
+        cursor: pointer;
+        color: var(--top-header-color);
+        font-size: 1.125rem;
+        transition: color 0.2s ease-in-out;
+        width: 38px;
+        height: 38px;
+        padding-top: 6px;
+        font-size: 17px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.1);
+        color: var(--nav-link-color);
+
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+
     .social-list {
         display: flex;
         gap: 1rem;
@@ -101,23 +121,53 @@
 
         li {
             a {
-                color: var(--top-header-color);
-                font-size: 1.125rem;
-                transition: color 0.2s ease-in-out;
-                width: 38px;
-                height: 38px;
-                padding-top: 6px;
-                font-size: 17px;
-                display: inline-block;
-                text-align: center;
-                border-radius: 50%;
-                background: rgba(0, 0, 0, 0.1);
-                color: var(--nav-link-color);
-
-                &:hover {
-                    color: var(--bs-primary);
-                }
+                @include social-item;
             }
+        }
+    }
+
+    .social-dropdown {
+        @include social-item;
+        cursor: pointer;
+        position: relative;
+        display: none;
+
+        .btn-social-dropdown {
+            padding: 0;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            background-color: transparent;
+            border: none;
+            transition: opacity 0.25s ease, transform 0.25s cubic-bezier(.22, 1, .36, 1);
+            z-index: 1;
+
+            &.show {
+                display: flex;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                right: auto !important;
+                top: 3rem !important;
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+                pointer-events: auto;
+            }
+        }
+
+        &:hover .dropdown-menu {
+            padding-top: 2rem;
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
         }
     }
 
@@ -136,6 +186,26 @@
         &:hover {
             background: var(--primary-active);
             border-color: var(--primary-active);
+        }
+    }
+
+    @media (max-width: 508px)  {
+        .social-list {
+            display: none;
+        }
+
+        .social-dropdown {
+            display: inline-block;
+            right: 8.8rem;
+            position: absolute;
+        }
+    }
+
+    @media (max-width: 320px)  {
+        .social-dropdown {
+            display: inline-block;
+            right: 8rem;
+            position: absolute;
         }
     }
 }
