@@ -1,9 +1,11 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import './_floating-buttons.style.scss';
 
 const FloatingButtons: React.FC = () => {
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const pathName = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -125,7 +127,7 @@ const FloatingButtons: React.FC = () => {
                     <i className="bi bi-chevron-up"></i>
                 </button>
             )}
-
+            { pathName.startsWith('/resume')  && (
             <button
                 className="floating-btn download-resume"
                 onClick={downloadResume}
@@ -136,6 +138,7 @@ const FloatingButtons: React.FC = () => {
             >
                 <i className="bi bi-download"></i>
             </button>
+            )}
         </div>
     );
 };
