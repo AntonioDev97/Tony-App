@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 import "./_Navbar.style.scss";
 
 const Navbar: React.FC = () => {
+  const pathname = usePathname() || "/";
+  // Open navbar menu by default
   useEffect(() => {
     const initOffcanvas = async () => {
       const { default: Offcanvas } = await import("bootstrap/js/dist/offcanvas");
@@ -18,8 +20,13 @@ const Navbar: React.FC = () => {
     };
     initOffcanvas();
   }, []);
-
-  const pathname = usePathname() || "/";
+  // Back to top when navigate
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [pathname])
 
   return (
     <nav id='main-navbar'>

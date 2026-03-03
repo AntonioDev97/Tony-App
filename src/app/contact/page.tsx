@@ -23,7 +23,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div className="intro-holder">
                     <h1 className="intro-name text-center">GET IN TOUCH</h1>
-                    <div className="contact-intro text-md-center limit-max-width mx-auto">
+                    <div className="contact-intro text-center limit-max-width mx-auto">
                         <p>Whether it’s building scalable cloud solutions, developing high-quality software, or discussing a new opportunity, feel free to reach out. I’m always open to meaningful collaborations and innovative challenges. </p>
                     </div>
                 </div>
