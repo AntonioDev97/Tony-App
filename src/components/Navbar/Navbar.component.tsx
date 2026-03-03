@@ -10,7 +10,10 @@ const Navbar: React.FC = () => {
       const { default: Offcanvas } = await import("bootstrap/js/dist/offcanvas");
       const offcanvasElement = document.getElementById("offcanvasMenu");
       if (!offcanvasElement) return;
-      const offcanvasInstance = new Offcanvas(offcanvasElement);
+      const offcanvasInstance = new Offcanvas(offcanvasElement, {
+        backdrop: false,
+        scroll: true
+      });
       offcanvasInstance.show();
     };
     initOffcanvas();
@@ -48,7 +51,7 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/contact' ? 'active' : ''}`}>
+              <Link href="/contact" className={`nav-link d-flex flex-column align-items-center ${pathname === '/contact' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-chat-dots-fill"></i></span>
                 <span className="nav-text">Contact</span>
               </Link>

@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Head from "./head";
 import { cookies } from "next/headers";
-import "./globals.scss";
 import Navbar from "@/components/Navbar";
 import FloatingButtons from "@/components/FloatingButtons";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Tony - Software Engineer",

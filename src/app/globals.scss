@@ -23,6 +23,9 @@
   --icon-bg-01: rgba(0, 0, 0, 0.1);
   --progress-bg: #19202e;
   --tag-bg-00: #19202e;
+  --form-control-bg: #273248;
+  --form-control-border-bg: #273248;
+  --form-control-color: white;
 }
 
 /* Light mode */
@@ -38,13 +41,16 @@
   --nav-link-color: #354765;
   --hover-nav-link-color: #121822;
   --main-container-bg: #fff;
-  --font-color-00:#121822;
+  --font-color-00: #121822;
   --font-subtitle-color: #354765;
   --hr-color-00: #c2cee1;
   --icon-bg-00: #8497bc;
   --icon-bg-01: #e4e9f2;
   --progress-bg: #e4e9f2;
   --tag-bg-00: #4f6591;
+  --form-control-bg: none;
+  --form-control-border-bg: #c2cee1;
+  --form-control-color: #354765;
 }
 
 html,
@@ -71,4 +77,45 @@ body {
 
 #main-app {
   flex: 1;
+
+  .top-section {
+    margin-top: 100px;
+    position: relative;
+    padding-top: calc(75px + 1rem);
+    background: var(--main-container-bg);
+    padding-bottom: 2.5rem;
+
+    .top-section-header {
+      .profile-img {
+        max-width: 160px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        margin-left: -80px;
+        top: -80px;
+        border: 8px solid var(--main-container-bg);
+      }
+    }
+
+    @media (min-width: 992px) {
+      max-width: 815px;
+
+      .px-lg-5 {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 940px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 980px;
+    }
+  }
+}
+
+.limit-max-width {
+    max-width: 700px;
 }
