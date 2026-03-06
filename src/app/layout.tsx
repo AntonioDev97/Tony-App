@@ -5,6 +5,7 @@ import Head from "./head";
 import { cookies } from "next/headers";
 import Navbar from "@/components/Navbar";
 import FloatingButtons from "@/components/FloatingButtons";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.scss";
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default async function RootLayout({
         </main>
         <Footer />
         <FloatingButtons />
+        <Analytics />
       </body>
     </html>
   );
