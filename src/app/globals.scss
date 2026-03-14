@@ -111,11 +111,27 @@ body {
     }
 
     @media (min-width: 1400px) {
-        max-width: 980px;
+      max-width: 980px;
+    }
+  }
+
+  .btn-two {
+    font-weight: bold;
+    color: white;
+    background: #465981;
+    border-color: #465981;
+    opacity: .9;
+    outline: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
 
 .limit-max-width {
-    max-width: 700px;
+  max-width: 700px;
 }

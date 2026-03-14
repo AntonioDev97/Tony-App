@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         <div className="offcanvas-body d-flex align-items-center">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link href="/coming-soon" className={`nav-link d-flex flex-column align-items-center ${pathname === '/about' ? 'active' : ''}`}>
+              <Link href="/about" className={`nav-link d-flex flex-column align-items-center ${pathname === '/about' ? 'active' : ''}`}>
                 <span className="icon-holder"><i className="bi bi-person-circle"></i></span>
                 <span className="nav-text">About</span>
               </Link>
